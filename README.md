@@ -1,24 +1,22 @@
 # find-a-coach-app
 
-## Project setup
-```
-npm install
-```
+Udemy Vue Course Main Project
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Find a Coach:
 
-### Lints and fixes files
-```
-npm run lint
-```
+   - list all coach
+   - view coach
+   - register a coach
+   - contact coach
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+2. Request (messages):
+
+   - contact coach
+   - view incoming requests
+
+## Planning the app:
+
+    1. Define key features
+    2. Sub features
