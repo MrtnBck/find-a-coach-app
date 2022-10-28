@@ -6,7 +6,7 @@
     <base-card>
       <div class="controls">
         <base-button mode="outline">Refresh</base-button>
-        <base-button link to="/register">Register as a Coach</base-button>
+        <base-button v-if="!isCoach" link to="/register">Register as a Coach</base-button>
       </div>
       <ul v-if="hasCoaches">
         <!-- <li v-for="coach in filteredCoaches" :key="coach.id">{{ coach.firstName }}</li> -->
@@ -47,7 +47,11 @@ export default {
       this.activeFilters = updatedFilters;
     },
   },
+
   computed: {
+    isCoach() {
+      return this.$store.getters["coaches/isCoach"];
+    },
     filteredCoaches() {
       //namespaced -> reach from root index [namespaceName/getterName]
       const coaches = this.$store.getters["coaches/coaches"];
