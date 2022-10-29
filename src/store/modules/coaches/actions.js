@@ -30,8 +30,6 @@ export default {
     const response = await fetch(`https://vue-http-demo-2b4db-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`);
     const responseData = await response.json();
 
-    console.log(responseData);
-
     if (!response.ok) {
       //error
       console.log("error");
