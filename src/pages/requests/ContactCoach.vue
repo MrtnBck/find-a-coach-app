@@ -33,13 +33,17 @@ export default {
         return;
       }
 
-      this.$store.dispatch("requests/contactCoach", {
-        email: this.email,
-        message: this.message,
-        coachId: this.$route.params.id,
-      });
+      try {
+        this.$store.dispatch("requests/contactCoach", {
+          email: this.email,
+          message: this.message,
+          coachId: this.$route.params.id,
+        });
 
-      this.$router.replace("/coaches");
+        this.$router.replace("/coaches");
+      } catch (error) {
+        this.error = error.message || "Something went wrong!";
+      }
     },
   },
 };
