@@ -1,5 +1,5 @@
 export default {
-  userId(state) {
+  /*   userId(state) {
     return state.userId;
-  },
+  }, */
 };
