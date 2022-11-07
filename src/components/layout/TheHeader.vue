@@ -19,9 +19,10 @@ export default {
       return this.$store.getters.isAuthenticated;
     },
   },
-  method: {
+  methods: {
     logout() {
       this.$store.dispatch("logout");
+      this.$router.replace("/coaches");
     },
   },
 };

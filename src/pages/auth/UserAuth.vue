@@ -78,6 +78,9 @@ export default {
         } else {
           await this.$store.dispatch("signup", actionPayload);
         }
+        //redirect is manually defined as query parameter variable, in CoachesList
+        const redirectUrl = "/" + (this.$route.query.redirect || "coaches");
+        this.$router.replace(redirectUrl);
       } catch (error) {
         this.error = error.message || "Failed to authenticate, try later.";
       }
